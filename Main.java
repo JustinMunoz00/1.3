@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Main
 {
-    public static void main(String[] args)
+    public static void main (String[] args)
     {
         System.out.println("Welome to my calculator!");
         System.out.println("Enter your first number.");
@@ -14,9 +14,13 @@ public class Main
         if(operation.equals("+"))
         {
             System.out.println("Answer: " + (first + second));
-        } else if (operation.equals("-")) System.out.println("Answer: " + (first - second))
-        else if (operation.equals("/")) System.out.println("Answer: " + (first/second))
-        else if (operation.equals("*")) System.out.println("Answer: " + (first*second))
+        } else if (operation.equals("-")) System.out.println("Answer: " + (first - second));
+        else if (operation.equals("/")){
+            while (second == 0) {
+                System.out.println("Please pick another number.");
+                second = s.nextInt();
+            } System.out.println("Answer: " + (first/second));
+        } else if (operation.equals("*")) System.out.println("Answer: " + (first*second));
         s.close();
     }
 }
